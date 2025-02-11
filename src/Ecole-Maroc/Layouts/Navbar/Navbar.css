@@ -1,0 +1,190 @@
+/* Navbar Transparente - Style Verre */
+.navbar {
+    background: rgba(255, 255, 255, 0.1) !important; /* Fond semi-transparent */
+    backdrop-filter: blur(12px) !important; /* Effet flou derrière */
+    border-bottom: 1px solid rgba(211, 11, 11, 0.1) !important;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Mode Clair */
+  .navbar-light {
+    background: rgba(245, 245, 245, 0.85) !important;
+    border-bottom: 1px solid rgba(213, 10, 10, 0.05) !important;
+  }
+  
+  .navbar-light .nav-link {
+    color: #2c3e50 !important;
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-light .nav-link:hover {
+    color: #3498db !important;
+  }
+  
+  /* Mode Sombre */
+  .navbar-dark {
+    background: rgba(0, 0, 0, 0.3) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  }
+  
+  .navbar-dark .nav-link {
+    color: #ecf0f1 !important;
+  }
+  
+  .navbar-dark .nav-link:hover {
+    color: #3498db !important;
+  }
+  
+  /* Effet de survol élégant */
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #3498db;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  /* Bouton Mode Sombre/Clair */
+  .theme-toggle {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(7, 245, 15, 0.2) !important;
+    color: inherit !important;
+    transition: all 0.3s ease;
+  }
+  
+  .theme-toggle:hover {
+    background: rgba(216, 16, 16, 0.2) !important;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Mobile */
+  @media (max-width: 991px) {
+    .navbar-collapse {
+      background: inherit !important;
+      backdrop-filter: inherit !important;
+      padding: 1rem;
+      margin-top: 0.5rem;
+      border-radius: 8px;
+    }
+  }
+  /* Bouton Mode Sombre/Clair */
+.theme-toggle {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(214, 6, 6, 0.2) !important;
+    color: inherit !important;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .theme-toggle:hover {
+    background: rgba(216, 4, 4, 0.2) !important;
+    transform: scale(1.05);
+  }
+  
+  /* Navbar.css */
+
+/* Style de l'image du logo avec animation */
+.logo-cycle {
+  width: 50px;
+  height: auto;
+  animation: cycleLogo 5s infinite linear; /* L'animation dure 5 secondes et est répétée à l'infini */
+}
+
+/* Animation de cycle du logo */
+@keyframes cycleLogo {
+  0% {
+    transform: rotate(0deg); /* Le logo commence avec une rotation de 0° */
+  }
+  25% {
+    transform: rotate(90deg); /* Tourne à 90° */
+  }
+  50% {
+    transform: rotate(180deg); /* Tourne à 180° */
+  }
+  75% {
+    transform: rotate(270deg); /* Tourne à 270° */
+  }
+  100% {
+    transform: rotate(360deg); /* Retourne à 360° */
+  }
+}
+/* Style pour le logo en cercle */
+.logo-cycle {
+  width: 60px; /* Ajustez la taille selon vos préférences */
+  height: 60px; /* Ajustez la taille selon vos préférences */
+  border-radius: 50%; /* Pour le rendre circulaire */
+  object-fit: cover; /* Pour s'assurer que l'image couvre le cercle sans déformation */
+  border: 3px solid #fff; /* Bordure blanche autour du logo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre légère pour l'esthétique */
+  transition: transform 0.3s ease; /* Transition pour les effets de survol */
+}
+
+/* Effet de survol pour le logo */
+.logo-cycle:hover {
+  transform: scale(1.1); /* Agrandir légèrement le logo au survol */
+}
+/* Ajouter de l'espace entre le logo et le texte "فرصة الثانية" */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Ajustez cette valeur selon l'espacement souhaité */
+}
+/* Style pour le logo en cercle */
+.logo-cycle {
+  width: 60px; /* Ajustez la taille selon vos préférences */
+  height: 60px; /* Ajustez la taille selon vos préférences */
+  border-radius: 50%; /* Pour le rendre circulaire */
+  object-fit: cover; /* Pour s'assurer que l'image couvre le cercle sans déformation */
+  border: 3px solid #fff; /* Bordure blanche autour du logo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre légère pour l'esthétique */
+  transition: transform 0.3s ease; /* Transition pour les effets de survol */
+  /* Supprimer l'animation de rotation */
+  animation: none; /* التأكد من تعطيل الأنيميشن */
+}
+
+/* Effet de survol pour le logo */
+.logo-cycle:hover {
+  transform: scale(1.1); /* Agrandir légèrement le logo au survol */
+}
+/* الخط العادي في ال Navbar */
+.navbar-light .nav-link {
+  color: #2c3e50 !important;
+  position: relative;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  font-size: 1rem; /* الحجم الأساسي للخط */
+}
+
+.navbar-dark .nav-link {
+  color: #ecf0f1 !important;
+  font-size: 1rem; /* الحجم الأساسي للخط */
+}
+
+/* عند التصفح عبر شاشات صغيرة (الهاتف) */
+@media (max-width: 768px) {
+  .navbar-light .nav-link {
+      font-size: 0.9rem; /* تصغير حجم الخط */
+  }
+
+  .navbar-dark .nav-link {
+      font-size: 0.9rem; /* تصغير حجم الخط */
+  }
+
+  .logo-cycle {
+      width: 50px; /* تصغير حجم اللوغو على الهواتف */
+      height: 50px; /* تصغير حجم اللوغو على الهواتف */
+  }
+}

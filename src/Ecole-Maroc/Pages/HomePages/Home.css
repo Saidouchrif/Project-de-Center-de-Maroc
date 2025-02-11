@@ -1,0 +1,338 @@
+/* Section générale */
+.home-container {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  transition: background-image 1s ease-in-out; /* الانتقال السلس بين الصور */
+}
+
+/* Effet de superposition pour améliorer la lisibilité du texte */
+.home-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* للحفاظ على تأثير التعتيم */
+  pointer-events: none; /* التأكد من أن العنصر لا يتداخل مع المستخدم */
+  transition: opacity 1s ease-in-out; /* الانتقال السلس للشفافية */
+}
+
+/* Style du titre */
+.home-title {
+  position: relative;
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+  font-family: 'Poppins', sans-serif;
+  animation: fadeIn 1.5s ease-in-out, floating 3s infinite ease-in-out;
+}
+
+/* Animation d’apparition */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Effet de flottement subtil */
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-title { font-size: 2.5rem; }
+}
+/* الحاوية الأساسية */
+.pages-container {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  padding: 3rem;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #333;
+  background-color: #f8f8f8;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* عند التمرير */
+.pages-container.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* الشبكة */
+.pages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* بطاقة الصفحة */
+.page-card {
+  background: linear-gradient(135deg, #4e91e2, #6bb4f5);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.page-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-card p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #f0f0f0;
+}
+
+/* تأثيرات عند التفاعل */
+.page-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+  .pages-container {
+    font-size: 1rem;
+  }
+
+  .page-card {
+    padding: 1.5rem;
+  }
+}
+/* الحاوية الأساسية */
+.pages-container {
+  opacity: 0;
+  transform: translateY(0); /* إزالة أي حركة */
+  transition: none; /* بدون أي انتقال */
+  padding: 3rem;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #333;
+  background-color: #f8f8f8;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* عند التمرير */
+.pages-container.show {
+  opacity: 1;
+  transform: none; /* ثابت تمامًا */
+}
+/* Section développeurs */
+.developers-section {
+  padding: 3rem;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  text-align: center;
+  margin-top: 50px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajout des images des développeurs */
+.developers-images {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.developer {
+  text-align: center;
+  width: 150px;
+  position: relative;
+}
+
+/* Ajout d'un cadre autour de l'image */
+.developer img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  border: 4px solid transparent; /* Cadre transparent par défaut */
+}
+
+/* Changer l'apparence au survol */
+.developer img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+  border: 4px solid #ffffff; /* Ajouter un cadre blanc lors du survol */
+}
+
+/* Textes des développeurs */
+.developer p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Changer la couleur du texte au survol */
+.developer:hover p {
+  color: #f0f0f0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .developer img {
+    width: 100px;
+  }
+
+  .developer p {
+    font-size: 0.9rem;
+  }
+}
+/* عند تصفح المستخدم عبر الهاتف */
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 3rem; /* تصغير حجم الخط في العنوان */
+  }
+
+  .pages-container {
+    font-size: 1.1rem; /* تصغير حجم الخط داخل الحاوية */
+  }
+
+  .page-card h3 {
+    font-size: 1.2rem; /* تصغير حجم الخط في عناوين البطاقات */
+  }
+
+  .page-card p {
+    font-size: 0.9rem; /* تصغير حجم الخط في النصوص */
+  }
+
+  .developer p {
+    font-size: 0.8rem; /* تصغير حجم الخط في نصوص المطورين */
+  }
+}
+/* تصميم النص الجديد */
+.developer-note {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #f0f0f0;
+  font-weight: 500;
+  line-height: 1.8;
+  text-align: center;
+  padding: 0 20px;
+}
+/* تصميم الفقرة */
+.developer-note {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* خلفية جذابة */
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* لون النص الخاص بـ LinkedIn */
+.linkedin-text {
+  color: #0a66c2; /* اللون الرسمي للينكد إن */
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* تأثير عند تمرير الماوس على النص */
+.linkedin-text:hover {
+  color: #ffffff;
+  text-shadow: 0px 0px 8px #0a66c2; /* تأثير مشع */
+}
+
+/* تصميم المطورين */
+.developers-images {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.developer {
+  text-align: center;
+  width: 150px;
+  position: relative;
+}
+
+/* إضافة تأثير على الصورة */
+.developer img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  border: 4px solid transparent;
+}
+
+/* تأثير عند تمرير الماوس على الصورة */
+.developer img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+  border: 4px solid #0a66c2; /* لون الإطار عند التفاعل */
+}
+
+/* نصوص المطورين */
+.developer p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* تأثير عند تمرير الماوس على النص */
+.developer:hover p {
+  color: #f0f0f0;
+}
+/* النص الأساسي */
+.developer-note.desktop {
+  display: block;
+}
+
+/* النص الخاص بالهواتف */
+.developer-note.mobile {
+  display: none;
+}
+
+/* تطبيق التغيير عند العرض على الهواتف */
+@media (max-width: 768px) {
+  .developer-note.desktop {
+    display: none;
+  }
+
+  .developer-note.mobile {
+    display: block;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+}

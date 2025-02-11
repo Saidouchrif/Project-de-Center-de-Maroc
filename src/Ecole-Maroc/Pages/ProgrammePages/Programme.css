@@ -1,0 +1,129 @@
+/* تهيئة الصفحة */
+.programme-container {
+  max-width: 1200px;
+  margin: 50px auto; /* إضافة مسافة من الأعلى والأسفل */
+  padding: 20px;
+  text-align: right; /* محاذاة النص */
+  direction: rtl; /* محاذاة النص العربي */
+  background: #ffffff; /* تغيير اللون إلى الأبيض */
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* إضافة تأثير الظل */
+  position: relative;
+  z-index: 1;
+  border: 3px solid #4e73df; /* تغيير اللون إلى أزرق متناسق */
+  transition: all 0.3s ease; /* إضافة تأثير عند التمرير على العنصر */
+}
+
+/* تخصيص عنوان البرنامج */
+.programme-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #4e73df; /* استخدام نفس اللون الأزرق للإطار */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 30px;
+  transition: color 0.3s ease; /* تأثير على اللون عند التمرير */
+}
+
+/* تأثير عند التمرير على العنوان */
+.programme-title:hover {
+  color: #ffeb3b; /* تغيير اللون إلى اللون الذهبي */
+}
+
+/* تخصيص Grid للبرنامج ليظهر كمربعات */
+.programme-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* ترتيب البرامج في مربعات */
+  gap: 20px;
+  padding-top: 20px;
+}
+
+/* تخصيص بطاقة الحدث */
+.programme-card {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+  color: #333; /* اللون الافتراضي للنص */
+  border: 2px solid transparent; /* إضافة حدود شفافة */
+  cursor: pointer;
+}
+
+/* تأثير عند التمرير على بطاقة الحدث */
+.programme-card:hover {
+  transform: scale(1.05); /* تكبير البطاقة */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* تكبير الظل */
+  background-color: #4e73df; /* تغيير الخلفية عند التمرير */
+  color: white; /* تغيير لون النص داخل البطاقة */
+  border-color: #ffeb3b; /* تغيير لون الحد عند التمرير */
+}
+
+/* تخصيص محتوى البطاقة */
+.programme-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* تخصيص تفاصيل الحدث */
+.programme-card-detail {
+  font-size: 16px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* تخصيص الأيقونات داخل البطاقة */
+.programme-icon-small {
+  font-size: 18px;
+  color: #007bff;
+}
+
+/* تأثير عند التمرير على الأيقونات */
+.programme-icon-small:hover {
+  color: #ff6347; /* تغيير اللون عند التمرير */
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .programme-container {
+    padding: 15px;
+  }
+
+  .programme-title {
+    font-size: 28px;
+  }
+
+  .programme-card-title {
+    font-size: 18px;
+  }
+
+  .programme-card-detail {
+    font-size: 14px;
+  }
+
+  .programme-grid {
+    grid-template-columns: 1fr 1fr; /* تقسيم الصف إلى عمودين للشاشات الصغيرة */
+  }
+}
+/* تأثير عند التمرير على بطاقة الحدث */
+.programme-card:hover {
+  transform: scale(1.05); /* تكبير البطاقة */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* تكبير الظل */
+  background-color: #007bff; /* تغيير الخلفية إلى اللون الأزرق الفاتح (متناسق مع الأيقونات) */
+  color: white; /* تغيير لون النص داخل البطاقة */
+  border-color: #007bff; /* تغيير لون الحد إلى نفس لون الخلفية */
+}
+/* تأثير عند التمرير على الأيقونات داخل البطاقة */
+.programme-card:hover .programme-icon-small {
+  color: #ffeb3b; /* تغيير اللون إلى اللون الذهبي */
+}
+
+/* تأثير عند الضغط على البطاقة */
+.programme-card:active .programme-icon-small {
+  color: #ffeb3b; /* تغيير اللون إلى اللون الذهبي عند الضغط */
+}

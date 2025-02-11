@@ -1,0 +1,209 @@
+/* Style pour le composant News */
+.news-container {
+  padding: 2rem;
+  background-color: #f0f4f8; /* لون خلفية خفيف يتناسب مع الألوان السابقة */
+  border-radius: 15px; /* إضافة حواف دائرية */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* إضافة تأثير الظل */
+  max-width: 1200px;
+  margin: 50px auto; /* إضافة مسافة من الأعلى والأسفل */
+}
+
+.news-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #4e73df; /* اللون الأزرق المتناسق مع الألوان السابقة */
+  margin-bottom: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+.news-title:hover {
+  color: #ffeb3b; /* تغيير اللون عند التمرير إلى الذهبي */
+}
+
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* ترتيب الأخبار في مربعات متساوية */
+  gap: 1.5rem;
+}
+
+.news-item {
+  background: #ffffff; /* خلفية بيضاء */
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* تأثير الظل بشكل أكبر */
+  transition: all 0.3s ease-in-out;
+  border: 2px solid transparent; /* إضافة حدود شفافة */
+  cursor: pointer;
+}
+
+.news-item:hover {
+  transform: scale(1.05); /* تكبير العنصر عند التمرير */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* إضافة ظل أكبر */
+  border-color: #4e73df; /* تغيير لون الحد عند التمرير */
+}
+
+.news-item-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.news-item-title a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.news-item-title a:hover {
+  text-decoration: underline;
+  color: #ff6347; /* تغيير اللون عند التمرير */
+}
+
+.news-item-description {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/* تخصيص الأيقونات داخل العناوين */
+.news-title .fa-newspaper {
+  font-size: 30px;
+  color: #3498db;
+}
+
+.news-item-title:hover .fa-newspaper {
+  color: #ff6347; /* تغيير اللون عند التمرير على الأيقونات */
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .news-container {
+      padding: 15px;
+  }
+
+  .news-title {
+      font-size: 1.8rem; /* تصغير حجم العنوان */
+  }
+
+  .news-item-title {
+      font-size: 1.4rem;
+  }
+
+  .news-item-description {
+      font-size: 0.95rem;
+  }
+
+  .news-list {
+      grid-template-columns: 1fr 1fr; /* تغيير التخطيط إلى عمودين */
+  }
+}
+
+@media (max-width: 480px) {
+  .news-container {
+      padding: 10px;
+  }
+
+  .news-title {
+      font-size: 1.6rem; /* تصغير العنوان بشكل أكبر على الشاشات الصغيرة */
+  }
+
+  .news-item-title {
+      font-size: 1.2rem;
+  }
+
+  .news-item-description {
+      font-size: 0.9rem;
+  }
+
+  .news-list {
+      grid-template-columns: 1fr; /* ترتيب العناصر في عمود واحد على الشاشات الصغيرة */
+  }
+}
+.news-item-image p {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.news-item-image a {
+  display: inline-block;
+  background-color: #4e73df; /* اللون الأزرق المتناسق */
+  color: #fff; /* النص الأبيض */
+  padding: 10px 20px; /* إضافة حشوة للزر */
+  border-radius: 8px; /* حواف دائرية */
+  text-decoration: none; /* إزالة التسطير */
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.news-item-image a:hover {
+  background-color: #ffeb3b; /* تغيير اللون إلى الذهبي عند التمرير */
+  color: #333; /* تغيير لون النص عند التمرير */
+  transform: scale(1.05); /* تكبير الرابط عند التمرير */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* إضافة تأثير الظل عند التمرير */
+}
+
+.news-item-image a:active {
+  transform: scale(0.98); /* تصغير الرابط عند الضغط */
+}
+.news-item-title a:hover {
+  color: #ff6347; /* تغيير اللون عند التمرير */
+  text-decoration: underline;
+}
+
+.news-item-title a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.news-item-title .fa-download {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.news-item-title .fa-download:hover {
+  color: #ff6347; /* تغيير اللون إلى البرتقالي عند التمرير */
+  transform: scale(1.1); /* تكبير الأيقونة قليلاً */
+}
+.news-item {
+  background: #ffffff; /* خلفية بيضاء */
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* تأثير الظل بشكل أكبر */
+  transition: all 0.3s ease-in-out;
+  border: 2px solid transparent; /* إضافة حدود شفافة */
+  cursor: pointer;
+  direction: rtl; /* تحديد اتجاه النص لليمين لكتابة العربية */
+  text-align: right; /* محاذاة النص إلى اليمين */
+}
+
+.news-item-title,
+.news-item-description,
+.news-item-image p {
+  text-align: right; /* تأكد من محاذاة جميع النصوص داخل الكارت إلى اليمين */
+}
+
+.news-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #4e73df;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+.news-title:hover {
+  color: #ffeb3b;
+}
