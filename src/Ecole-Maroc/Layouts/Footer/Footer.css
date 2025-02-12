@@ -1,4 +1,4 @@
-/* Footer Styling */
+
 .footer {
     background-color: #333;
     color: white;
@@ -7,7 +7,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;  /* Assure que le footer est au-dessus des autres éléments */
+    z-index: 1000; 
     text-align: center;
   }
   
@@ -37,18 +37,18 @@
     color: #3498db;
   }
   
-  /* Mobile adjustments */
+ 
   @media (max-width: 767px) {
     .footer .social-icons a {
       font-size: 1.2rem;
     }
   }
   
-  /* Ajouter un espacement suffisant au bas du contenu pour que le footer ne chevauche pas le contenu */
+  
   body {
-    padding-bottom: 80px; /* Ajustez cette valeur en fonction de la hauteur de votre footer */
+    padding-bottom: 80px; 
   }
-  /* تأكد أن ارتفاع الصفحة لا يقل عن ارتفاع نافذة العرض */
+ 
 html, body {
   height: 100%;
   margin: 0;
@@ -59,12 +59,12 @@ body {
   flex-direction: column;
 }
 
-/* المحتوى الرئيسي يأخذ باقي المساحة */
+
 .main-content {
   flex: 1;
 }
 
-/* الفوتر في نهاية الصفحة */
+
 .footer {
   background-color: #333;
   color: white;
@@ -80,14 +80,14 @@ body {
   bottom: 0;
   width: 100%;
 }
-/* إعطاء مسافة مناسبة للمحتوى */
+
 body {
   margin: 0;
   padding: 0;
-  padding-bottom: 80px; /* هذه القيمة تعتمد على ارتفاع الفوتر */
+  padding-bottom: 80px; 
 }
 
-/* إزالة خاصية position: fixed من الفوتر */
+
 .footer {
-  position: relative; /* أو احذف position */
+  position: relative; 
 }

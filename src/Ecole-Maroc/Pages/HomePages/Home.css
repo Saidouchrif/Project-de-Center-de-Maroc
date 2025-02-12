@@ -1,4 +1,4 @@
-/* Section générale */
+
 .home-container {
   height: 100vh;
   background-size: cover;
@@ -9,10 +9,10 @@
   justify-content: center;
   text-align: center;
   position: relative;
-  transition: background-image 1s ease-in-out; /* الانتقال السلس بين الصور */
+  transition: background-image 1s ease-in-out; 
 }
 
-/* Effet de superposition pour améliorer la lisibilité du texte */
+
 .home-container::before {
   content: "";
   position: absolute;
@@ -20,12 +20,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* للحفاظ على تأثير التعتيم */
-  pointer-events: none; /* التأكد من أن العنصر لا يتداخل مع المستخدم */
-  transition: opacity 1s ease-in-out; /* الانتقال السلس للشفافية */
+  background: rgba(0, 0, 0, 0.5); 
+  pointer-events: none; 
+  transition: opacity 1s ease-in-out; 
 }
 
-/* Style du titre */
+
 .home-title {
   position: relative;
   color: white;
@@ -37,24 +37,24 @@
   animation: fadeIn 1.5s ease-in-out, floating 3s infinite ease-in-out;
 }
 
-/* Animation d’apparition */
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Effet de flottement subtil */
+
 @keyframes floating {
   0% { transform: translateY(0px); }
   50% { transform: translateY(10px); }
   100% { transform: translateY(0px); }
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .home-title { font-size: 2.5rem; }
 }
-/* الحاوية الأساسية */
+
 .pages-container {
   opacity: 0;
   transform: translateY(20px);
@@ -69,13 +69,13 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* عند التمرير */
+
 .pages-container.show {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* الشبكة */
+
 .pages-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -83,7 +83,7 @@
   margin-top: 20px;
 }
 
-/* بطاقة الصفحة */
+
 .page-card {
   background: linear-gradient(135deg, #4e91e2, #6bb4f5);
   color: white;
@@ -106,13 +106,13 @@
   color: #f0f0f0;
 }
 
-/* تأثيرات عند التفاعل */
+
 .page-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* تصميم متجاوب */
+
 @media (max-width: 768px) {
   .pages-container {
     font-size: 1rem;
@@ -122,11 +122,11 @@
     padding: 1.5rem;
   }
 }
-/* الحاوية الأساسية */
+
 .pages-container {
   opacity: 0;
-  transform: translateY(0); /* إزالة أي حركة */
-  transition: none; /* بدون أي انتقال */
+  transform: translateY(0); 
+  transition: none; 
   padding: 3rem;
   text-align: center;
   font-size: 1.3rem;
@@ -137,12 +137,12 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* عند التمرير */
+
 .pages-container.show {
   opacity: 1;
-  transform: none; /* ثابت تمامًا */
+  transform: none; 
 }
-/* Section développeurs */
+
 .developers-section {
   padding: 3rem;
   background: linear-gradient(135deg, #1e3c72, #2a5298);
@@ -153,7 +153,7 @@
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Ajout des images des développeurs */
+
 .developers-images {
   display: flex;
   justify-content: center;
@@ -167,23 +167,23 @@
   position: relative;
 }
 
-/* Ajout d'un cadre autour de l'image */
+
 .developer img {
   width: 100%;
   border-radius: 50%;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
-  border: 4px solid transparent; /* Cadre transparent par défaut */
+  border: 4px solid transparent; 
 }
 
-/* Changer l'apparence au survol */
+
 .developer img:hover {
   transform: scale(1.1);
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
-  border: 4px solid #ffffff; /* Ajouter un cadre blanc lors du survol */
+  border: 4px solid #ffffff; 
 }
 
-/* Textes des développeurs */
+
 .developer p {
   margin-top: 10px;
   font-weight: bold;
@@ -192,12 +192,12 @@
   transition: color 0.3s ease;
 }
 
-/* Changer la couleur du texte au survol */
+
 .developer:hover p {
   color: #f0f0f0;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .developer img {
     width: 100px;
@@ -207,29 +207,29 @@
     font-size: 0.9rem;
   }
 }
-/* عند تصفح المستخدم عبر الهاتف */
+
 @media (max-width: 768px) {
   .home-title {
-    font-size: 3rem; /* تصغير حجم الخط في العنوان */
+    font-size: 3rem; 
   }
 
   .pages-container {
-    font-size: 1.1rem; /* تصغير حجم الخط داخل الحاوية */
+    font-size: 1.1rem; 
   }
 
   .page-card h3 {
-    font-size: 1.2rem; /* تصغير حجم الخط في عناوين البطاقات */
+    font-size: 1.2rem; 
   }
 
   .page-card p {
-    font-size: 0.9rem; /* تصغير حجم الخط في النصوص */
+    font-size: 0.9rem; 
   }
 
   .developer p {
-    font-size: 0.8rem; /* تصغير حجم الخط في نصوص المطورين */
+    font-size: 0.8rem; 
   }
 }
-/* تصميم النص الجديد */
+
 .developer-note {
   margin-top: 20px;
   font-size: 1.1rem;
@@ -239,7 +239,7 @@
   text-align: center;
   padding: 0 20px;
 }
-/* تصميم الفقرة */
+
 .developer-note {
   font-size: 1.2rem;
   font-weight: bold;
@@ -253,20 +253,20 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* لون النص الخاص بـ LinkedIn */
+
 .linkedin-text {
-  color: #0a66c2; /* اللون الرسمي للينكد إن */
+  color: #0a66c2; 
   font-weight: bold;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-/* تأثير عند تمرير الماوس على النص */
+
 .linkedin-text:hover {
   color: #ffffff;
-  text-shadow: 0px 0px 8px #0a66c2; /* تأثير مشع */
+  text-shadow: 0px 0px 8px #0a66c2; 
 }
 
-/* تصميم المطورين */
+
 .developers-images {
   display: flex;
   justify-content: center;
@@ -280,7 +280,7 @@
   position: relative;
 }
 
-/* إضافة تأثير على الصورة */
+
 .developer img {
   width: 100%;
   border-radius: 50%;
@@ -289,14 +289,14 @@
   border: 4px solid transparent;
 }
 
-/* تأثير عند تمرير الماوس على الصورة */
+
 .developer img:hover {
   transform: scale(1.1);
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
   border: 4px solid #0a66c2; /* لون الإطار عند التفاعل */
 }
 
-/* نصوص المطورين */
+
 .developer p {
   margin-top: 10px;
   font-weight: bold;
@@ -305,21 +305,21 @@
   transition: color 0.3s ease;
 }
 
-/* تأثير عند تمرير الماوس على النص */
+
 .developer:hover p {
   color: #f0f0f0;
 }
-/* النص الأساسي */
+
 .developer-note.desktop {
   display: block;
 }
 
-/* النص الخاص بالهواتف */
+
 .developer-note.mobile {
   display: none;
 }
 
-/* تطبيق التغيير عند العرض على الهواتف */
+
 @media (max-width: 768px) {
   .developer-note.desktop {
     display: none;

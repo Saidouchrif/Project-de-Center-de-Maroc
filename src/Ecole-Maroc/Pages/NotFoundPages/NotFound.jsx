@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './NotFound.css'; // تأكد من إضافة التأثيرات في ملف CSS الخاص بك.
+import './NotFound.css'; 
 
 const NotFound = () => (
   <div className="not-found-container">

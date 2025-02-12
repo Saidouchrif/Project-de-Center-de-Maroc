@@ -19,7 +19,7 @@ import News from '../NewsPages/News';
 
 export default function Home() {
   const [showPages, setShowPages] = useState(false);
-  const [currentLogo, setCurrentLogo] = useState(logo); // Default logo
+  const [currentLogo, setCurrentLogo] = useState(logo); 
 
   useEffect(() => {
     const logos = [logo, logo3, logo4, logo12 ,logo7, logo5, logo6, logo8, logo9, logo10, logo11 , logo13];
@@ -27,10 +27,10 @@ export default function Home() {
 
     const logoInterval = setInterval(() => {
       setCurrentLogo(logos[index]);
-      index = (index + 1) % logos.length; // Loop back to the first logo
-    }, 1000); // Change logo every 1 second
+      index = (index + 1) % logos.length; 
+    }, 800); 
 
-    return () => clearInterval(logoInterval); // Cleanup the interval when component unmounts
+    return () => clearInterval(logoInterval); 
   }, []);
 
   useEffect(() => {
@@ -46,12 +46,12 @@ export default function Home() {
 
   return (
     <>
-      {/* Section d’accueil avec image et titre animé */}
+      
       <div className="home-container" style={{ backgroundImage: `url(${currentLogo})` }}>
         <h1 className="home-title">الفرصة الثانية</h1>
       </div>
 
-      {/* Contenu des autres pages après le défilement */}
+     
       <div className={`pages-container ${showPages ? 'show' : ''}`}>
         <h2>صفحات الموقع</h2>
         <p>مرحبًا بكم في موقعنا، استكشفوا جميع الأقسام المتاحة</p>
@@ -71,24 +71,17 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Sections des pages */}
       <div className="pages">
         <Programme />
         <News />
         <About />
       </div>
 
-      <br />
-      <br />
-      <br />
-
-      {/* Section développeurs */}
-      {/* Section développeurs */}
       <div className="developers-section">
   <h1>مطورون الموقع</h1>
   <p>فريقنا يعمل بكل جهد لتقديم أفضل تجربة لكم. شكرًا لكم على دعمكم المستمر!</p>
 
-  {/* الفقرة المضافة */}
+
   <p className="developer-note desktop">
   واستكشاف المزيد عن خلفياتهم ومهاراتهم المهنية
   <strong>LinkedIn</strong>
@@ -100,7 +93,7 @@ export default function Home() {
 </p>
 
 
-  {/* صور المطورين */}
+  
   <div className="developers-images">
     <div className="developer">
       <a href="https://www.linkedin.com/in/said-ouchrif-990947194/" target="_blank" rel="noopener noreferrer">

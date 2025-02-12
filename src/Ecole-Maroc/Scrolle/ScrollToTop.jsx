@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 export default function ScrollToTop() {
   const [showButton, setShowButton] = useState(false);
 
-  // تابع لتمرير الصفحة
+  
   const handleScroll = () => {
     if (window.scrollY > 300) {
       setShowButton(true);

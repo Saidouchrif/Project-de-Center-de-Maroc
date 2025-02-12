@@ -1,5 +1,5 @@
 import React from "react";
-import './Contact.css'; // Importation du fichier CSS
+import './Contact.css';
 
 const Contact = () => (
   <div className="contact-container">
@@ -9,7 +9,12 @@ const Contact = () => (
       <p className="contact-description">
         نحن سعداء بالتواصل معكم! إذا كان لديكم أي استفسارات أو اقتراحات أو تحتاجون إلى معلومات إضافية، لا تترددوا في مراسلتنا عبر البريد الإلكتروني أو الاتصال بنا.
       </p>
-
+      <div className="contact-box">
+        <p className="contact-text">✉️ البريد الإلكتروني:</p>
+        <a href="mailto:ibnhanbal49@gmail.com" className="contact-email">
+        ibnhanbal49@gmail.com
+        </a>
+      </div>
       <div className="contact-box">
         <p className="contact-text">📞 رقم الهاتف:</p>
         <a href="tel:+212529590183" className="contact-phone">

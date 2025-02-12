@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaHome, FaNewspaper, FaMapMarkedAlt, FaInfoCircle, FaPhoneAlt, FaMoon, FaSun, FaCalendarAlt } from 'react-icons/fa';
 import "./Navbar.css";
-import logo from './logo.jpg';  // Assurez-vous que le chemin est correct
+import logo from './logo.jpg';  
 
 export default function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
@@ -12,7 +12,7 @@ export default function Navbar() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   const handleLinkClick = () => {
-    // إغلاق القائمة عندما يضغط المستخدم على أي رابط
+    
     setMenuOpen(false);
   };
 
@@ -22,13 +22,13 @@ export default function Navbar() {
       dir="rtl"
     >
       <div className="container-fluid">
-        {/* Logo et Brand */}
+      
         <Link className="navbar-brand" to="/" onClick={handleLinkClick}>
           <img src={logo} alt="Logo" className="logo-cycle" />
           الفرصة الثانية
         </Link>
 
-        {/* Menu toggler */}
+
         <button 
           className="navbar-toggler" 
           type="button" 
@@ -39,7 +39,7 @@ export default function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Navigation menu */}
+      
         <div className={`collapse navbar-collapse ${menuOpen ? 'show' : ''}`} id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">

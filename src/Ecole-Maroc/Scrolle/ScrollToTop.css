@@ -1,4 +1,4 @@
-/* زر التمرير للأعلى */
+
 .scroll-to-top-btn {
     position: fixed;
     bottom: 20px;
@@ -15,14 +15,14 @@
     transition: all 0.3s ease;
   }
   
-  /* التأثير عند التمرير فوق الزر */
+ 
   .scroll-to-top-btn:hover {
     background-color: #2980b9;
     transform: scale(1.1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   }
   
-  /* التأثير عند التمرير فوق الزر للموبايل */
+
   @media (max-width: 768px) {
     .scroll-to-top-btn {
       bottom: 15px;
@@ -32,7 +32,7 @@
     }
   }
   
-  /* التأثير عند التمرير فوق الزر للأجهزة الكبيرة */
+
   @media (min-width: 1024px) {
     .scroll-to-top-btn {
       bottom: 30px;
@@ -41,30 +41,30 @@
       font-size: 24px;
     }
   }
-  /* التأثير عند التمرير فوق الزر للأجهزة الكبيرة */
+
 @media (min-width: 1024px) {
     .scroll-to-top-btn {
       bottom: 30px;
       right: 30px;
-      padding: 12px 20px; /* تصغير حجم البادينغ */
-      font-size: 18px; /* حجم خط أصغر */
-      width: 50px; /* عرض الزر دائري */
-      height: 50px; /* ارتفاع الزر دائري */
-      border-radius: 50%; /* التأكد من أنه دائري */
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* تحسين الظل */
+      padding: 12px 20px;
+      font-size: 18px;
+      width: 50px; 
+      height: 50px; 
+      border-radius: 50%; 
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
     }
   }
-  /* التأثير عند التمرير فوق الزر للموبايل */
+ 
 @media (max-width: 768px) {
     .scroll-to-top-btn {
       bottom: 15px;
       right: 15px;
-      padding: 10px 15px; /* تصغير البادينغ */
-      font-size: 18px; /* حجم الخط أصغر */
-      width: 45px; /* عرض الزر */
-      height: 45px; /* ارتفاع الزر */
-      border-radius: 50%; /* التأكد من أن الزر دائري */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* تحسين الظل */
+      padding: 10px 15px; 
+      font-size: 18px; 
+      width: 45px; 
+      height: 45px; 
+      border-radius: 50%; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     }
   }
   

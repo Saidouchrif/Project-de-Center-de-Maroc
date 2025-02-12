@@ -1,12 +1,11 @@
-/* Navbar Transparente - Style Verre */
 .navbar {
-    background: rgba(255, 255, 255, 0.1) !important; /* Fond semi-transparent */
-    backdrop-filter: blur(12px) !important; /* Effet flou derrière */
+    background: rgba(255, 255, 255, 0.1) !important; 
+    backdrop-filter: blur(12px) !important; 
     border-bottom: 1px solid rgba(211, 11, 11, 0.1) !important;
     transition: all 0.3s ease-in-out;
   }
   
-  /* Mode Clair */
+  
   .navbar-light {
     background: rgba(245, 245, 245, 0.85) !important;
     border-bottom: 1px solid rgba(213, 10, 10, 0.05) !important;
@@ -23,7 +22,7 @@
     color: #3498db !important;
   }
   
-  /* Mode Sombre */
+
   .navbar-dark {
     background: rgba(0, 0, 0, 0.3) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
@@ -37,7 +36,7 @@
     color: #3498db !important;
   }
   
-  /* Effet de survol élégant */
+ 
   .nav-link::after {
     content: '';
     position: absolute;
@@ -53,7 +52,7 @@
     width: 100%;
   }
   
-  /* Bouton Mode Sombre/Clair */
+  
   .theme-toggle {
     background: rgba(255, 255, 255, 0.1) !important;
     border: 1px solid rgba(7, 245, 15, 0.2) !important;
@@ -66,7 +65,7 @@
     transform: scale(1.05);
   }
   
-  /* Responsive Mobile */
+
   @media (max-width: 991px) {
     .navbar-collapse {
       background: inherit !important;
@@ -76,7 +75,7 @@
       border-radius: 8px;
     }
   }
-  /* Bouton Mode Sombre/Clair */
+  
 .theme-toggle {
     background: rgba(255, 255, 255, 0.1) !important;
     border: 1px solid rgba(214, 6, 6, 0.2) !important;
@@ -94,97 +93,104 @@
     transform: scale(1.05);
   }
   
-  /* Navbar.css */
+  
 
-/* Style de l'image du logo avec animation */
+
 .logo-cycle {
   width: 50px;
   height: auto;
-  animation: cycleLogo 5s infinite linear; /* L'animation dure 5 secondes et est répétée à l'infini */
+  animation: cycleLogo 5s infinite linear; 
 }
 
-/* Animation de cycle du logo */
+
 @keyframes cycleLogo {
   0% {
-    transform: rotate(0deg); /* Le logo commence avec une rotation de 0° */
+    transform: rotate(0deg); 
   }
   25% {
-    transform: rotate(90deg); /* Tourne à 90° */
+    transform: rotate(90deg); 
   }
   50% {
-    transform: rotate(180deg); /* Tourne à 180° */
+    transform: rotate(180deg); 
   }
   75% {
-    transform: rotate(270deg); /* Tourne à 270° */
+    transform: rotate(270deg); 
   }
   100% {
-    transform: rotate(360deg); /* Retourne à 360° */
+    transform: rotate(360deg); 
   }
 }
-/* Style pour le logo en cercle */
+
 .logo-cycle {
-  width: 60px; /* Ajustez la taille selon vos préférences */
-  height: 60px; /* Ajustez la taille selon vos préférences */
-  border-radius: 50%; /* Pour le rendre circulaire */
-  object-fit: cover; /* Pour s'assurer que l'image couvre le cercle sans déformation */
-  border: 3px solid #fff; /* Bordure blanche autour du logo */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre légère pour l'esthétique */
-  transition: transform 0.3s ease; /* Transition pour les effets de survol */
+  width: 60px; 
+  height: 60px;
+  border-radius: 50%; 
+  object-fit: cover; 
+  border: 3px solid #fff; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s ease; 
 }
 
-/* Effet de survol pour le logo */
+
 .logo-cycle:hover {
-  transform: scale(1.1); /* Agrandir légèrement le logo au survol */
+  transform: scale(1.1); 
 }
-/* Ajouter de l'espace entre le logo et le texte "فرصة الثانية" */
+
 .navbar-brand {
   display: flex;
   align-items: center;
-  gap: 10px; /* Ajustez cette valeur selon l'espacement souhaité */
-}
-/* Style pour le logo en cercle */
-.logo-cycle {
-  width: 60px; /* Ajustez la taille selon vos préférences */
-  height: 60px; /* Ajustez la taille selon vos préférences */
-  border-radius: 50%; /* Pour le rendre circulaire */
-  object-fit: cover; /* Pour s'assurer que l'image couvre le cercle sans déformation */
-  border: 3px solid #fff; /* Bordure blanche autour du logo */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre légère pour l'esthétique */
-  transition: transform 0.3s ease; /* Transition pour les effets de survol */
-  /* Supprimer l'animation de rotation */
-  animation: none; /* التأكد من تعطيل الأنيميشن */
+  gap: 10px; 
 }
 
-/* Effet de survol pour le logo */
-.logo-cycle:hover {
-  transform: scale(1.1); /* Agrandir légèrement le logo au survol */
+.logo-cycle {
+  width: 60px; 
+  height: 60px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  border: 3px solid #fff; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s ease;
+  animation: none;
 }
-/* الخط العادي في ال Navbar */
+
+
+.logo-cycle:hover {
+  transform: scale(1.1); 
+}
+
 .navbar-light .nav-link {
   color: #2c3e50 !important;
   position: relative;
   padding: 0.5rem 1rem;
   transition: all 0.3s ease;
-  font-size: 1rem; /* الحجم الأساسي للخط */
+  font-size: 1rem; 
 }
 
 .navbar-dark .nav-link {
   color: #ecf0f1 !important;
-  font-size: 1rem; /* الحجم الأساسي للخط */
+  font-size: 1rem; 
 }
 
-/* عند التصفح عبر شاشات صغيرة (الهاتف) */
+
 @media (max-width: 768px) {
   .navbar-light .nav-link {
-      font-size: 0.9rem; /* تصغير حجم الخط */
+      font-size: 0.9rem; 
   }
 
   .navbar-dark .nav-link {
-      font-size: 0.9rem; /* تصغير حجم الخط */
+      font-size: 0.9rem; 
   }
 
   .logo-cycle {
-      width: 50px; /* تصغير حجم اللوغو على الهواتف */
-      height: 50px; /* تصغير حجم اللوغو على الهواتف */
+      width: 50px;
+      height: 50px;
   }
+}
+
+.navbar .nav-link.active, 
+.navbar .nav-link:focus {
+  color: #3498db;
+  border-bottom: 2px solid #3498db;
+  background-color: rgba(52, 152, 219, 0.1); 
+  transition: all 0.3s ease;
 }

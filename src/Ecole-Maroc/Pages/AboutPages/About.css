@@ -1,11 +1,11 @@
-/* Container principal */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
   }
   
-  /* Titre principal de la page */
+
   .text-primary {
     color: #007bff !important;
   }
@@ -14,7 +14,7 @@
     color: #6c757d !important;
   }
   
-  /* Style des cartes (card) */
+  
   .card {
     border: none;
     border-radius: 15px;
@@ -22,7 +22,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px; /* Ajouter un espace entre les cartes */
+    margin-bottom: 20px; 
   }
   
   .card:hover {
@@ -30,7 +30,7 @@
     transform: translateY(-5px);
   }
   
-  /* Image du membre de l'équipe */
+  
   .card-img-top {
     width: 150px;
     height: 150px;
@@ -44,7 +44,7 @@
     transform: scale(1.1);
   }
   
-  /* Corps de la carte */
+  
   .card-body {
     padding: 15px;
     text-align: center;
@@ -62,25 +62,25 @@
     color: #666;
   }
   
-  /* Section "Faites connaissance avec notre équipe" */
+
   .row {
     margin-top: 40px;
     display: flex;
-    flex-wrap: wrap; /* Utiliser flex-wrap pour éviter le débordement */
+    flex-wrap: wrap; 
     justify-content: center;
     gap: 30px;
   }
   
-  /* Chaque colonne dans la row */
+
   .row .col-lg-4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* S'assurer que chaque carte a une largeur de 100% sur mobile */
-    max-width: 300px; /* Limiter la largeur des cartes pour éviter qu'elles soient trop grandes */
+    width: 100%; 
+    max-width: 300px; 
   }
   
-  /* Section "Footer" */
+ 
   .text-center {
     text-align: center;
     margin-top: 50px;
@@ -91,12 +91,12 @@
     color: #777;
   }
   
-  /* Responsive: Si l'écran est plus petit que 768px */
+  
   @media (max-width: 768px) {
     .row {
-      flex-direction: column; /* Réorganiser les cartes de manière verticale */
+      flex-direction: column; 
       align-items: center;
-      gap: 20px; /* Réduire l'espace entre les éléments */
+      gap: 20px; 
     }
   
     .card-body {
@@ -115,13 +115,13 @@
       font-size: 2rem;
     }
   
-    /* Ajuster les images sur mobile */
+  
     .card-img-top {
       width: 120px;
       height: 120px;
     }
     
-    /* Ajouter un padding en bas des cartes pour éviter la coupe sur les petits écrans */
+   
     .card {
       padding-bottom: 20px;
     }

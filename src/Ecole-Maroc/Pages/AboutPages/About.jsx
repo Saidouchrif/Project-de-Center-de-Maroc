@@ -13,8 +13,6 @@ const About = () => (
     <h2 className="text-center mb-4 text-secondary">فريق العمل</h2>
     
     <div className="row text-center">
-      {/* المدير */}
-{/* المدير */}
 <div className="col-lg-4 col-md-6 mb-4">
   <div className="card shadow-sm border-0 rounded">
     <img src={logo} alt="المدير" className="card-img-top rounded-circle mx-auto d-block mt-3" style={{ width: '150px', height: '150px', objectFit: 'cover' }} />
@@ -22,7 +20,7 @@ const About = () => (
       <div className="text-center">
       <h5 className="card-title">المدير</h5>
       </div>
-      <h5 className="card-title">الاسم هنا</h5>
+      <h5 className="card-title">عبدالله اشح</h5>
       <p className="card-text">يشرف المدير على جميع الأنشطة الإدارية والأكاديمية لضمان توفير تعليم عالي الجودة. يقود الفريق المدرسي نحو النجاح المستدام</p>
     </div>
   </div>
@@ -32,9 +30,9 @@ const About = () => (
     <img src={logo3} alt="أستاذ 1" className="card-img-top rounded-circle mx-auto d-block mt-3" style={{ width: '150px', height: '150px', objectFit: 'cover' }} />
     <div className="card-body">
       <div className="text-center">
-      <h5 className="card-title">الاسم هنا</h5>
-      </div>
       <h5 className="card-title">المشرفة التربوية</h5>
+      </div>
+      <h5 className="card-title">حليمة عاتق</h5>
       <p className="card-text">تحرص على انضباط التلاميذ داخل المؤسسة، مما يساعد على توفير بيئة تعليمية منظمة. لديها شغف كبير بالحفاظ على النظام وضمان سير المؤسسة بشكل أفضل</p>
     </div>
   </div>
@@ -46,12 +44,12 @@ const About = () => (
       <div className="text-center">
       <h5 className="card-title">أستاذة العلوم</h5>
       </div>
-      <h5 className="card-title">الاسم هنا</h5>
+      <h5 className="card-title">لعتيق فتيحة</h5>
       <p className="card-text">تُدرس أستاذة العلوم المفاهيم الأساسية وتساعد الطلاب في التميز في المواد العلمية. لديها شغف كبير بتبسيط العلوم وجعلها ممتعة</p>
     </div>
   </div>
 </div>
-{/* أستاذ 1 */}
+
 
 
 <div className="col-lg-4 col-md-6 mb-4">
@@ -66,7 +64,7 @@ const About = () => (
     </div>
   </div>
 </div>
-{/* أستاذ 2 */}
+
 
     </div>
   </div>

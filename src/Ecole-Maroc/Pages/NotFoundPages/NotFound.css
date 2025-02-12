@@ -1,10 +1,10 @@
-/* التأثيرات العامة */
+
 .not-found-container {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #2d2d2d, #1c1c1c); /* خلفية مظلمة */
+    background: linear-gradient(135deg, #2d2d2d, #1c1c1c); 
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -12,33 +12,33 @@
 }
 
 .not-found-content {
-    background: rgba(0, 0, 0, 0.8); /* خلفية شبه شفافة داكنة */
+    background: rgba(0, 0, 0, 0.8); 
     padding: 50px;
     border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* زيادة الظل لجعل المحتوى يبرز */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); 
     animation: slideUp 1s ease-out;
 }
 
 .error-title {
     font-size: 4rem;
     font-weight: bold;
-    color: #fff; /* جعل النص أبيض ليكون واضحًا على الخلفية السوداء */
+    color: #fff; 
     margin-bottom: 20px;
     text-transform: uppercase;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* زيادة الظل لجعل النص يبرز أكثر */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); 
     animation: fadeIn 1.5s ease-out;
 }
 
 .error-message {
     font-size: 1.2rem;
-    color: #f5f5f5; /* نص فاتح على خلفية داكنة */
+    color: #f5f5f5; 
     margin-bottom: 30px;
     font-style: italic;
     animation: fadeInText 1.5s ease-in-out;
 }
 
 .go-home-button {
-    background-color: #1c1c1c; /* لون الزر داكن يناسب الخلفية */
+    background-color: #1c1c1c; 
     color: #fff;
     padding: 12px 30px;
     font-size: 1.1rem;
@@ -51,10 +51,10 @@
 }
 
 .go-home-button:hover {
-    background-color: #333333; /* تغيير اللون عند التمرير إلى لون داكن */
+    background-color: #333333; 
 }
 
-/* تأثيرات الأنيميشن */
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -70,7 +70,7 @@
     to { opacity: 1; }
 }
 
-/* تأثيرات الهاتف */
+
 @media (max-width: 768px) {
     .not-found-content {
         padding: 30px;
