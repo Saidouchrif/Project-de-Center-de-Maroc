@@ -1,17 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import logo from '../images/5.jpg';
 import logo2 from '../images/Photopro.jpg';
-import logo3 from '../images/1.jpg';
-import logo4 from '../images/2.jpg';
-import logo5 from '../images/3.jpg';
-import logo6 from '../images/4.jpg';
-import logo7 from '../images/5.jpg';
-import logo8 from '../images/6.jpg';
-import logo9 from '../images/7.jpg';
-import logo10 from '../images/444.jpg';
-import logo11 from '../images/111.jpg';
-import logo12 from '../images/333.jpg';
-import logo13 from '../images/555.jpg';
 import './Home.css';
 import About from '../AboutPages/About';
 import Programme from '../ProgrammePages/Programme';
@@ -22,13 +11,13 @@ export default function Home() {
   const [currentLogo, setCurrentLogo] = useState(logo); 
 
   useEffect(() => {
-    const logos = [logo, logo3, logo4, logo12 ,logo7, logo5, logo6, logo8, logo9, logo10, logo11 , logo13];
+    const logos = [logo];
     let index = 0;
 
     const logoInterval = setInterval(() => {
       setCurrentLogo(logos[index]);
       index = (index + 1) % logos.length; 
-    }, 800); 
+    }, 3500); 
 
     return () => clearInterval(logoInterval); 
   }, []);
