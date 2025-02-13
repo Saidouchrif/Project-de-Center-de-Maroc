@@ -59,7 +59,8 @@ const About = () => (
       <div className="text-center">
       <h5 className="card-title">أستاذ ورشة نجارة</h5>
       </div>
-      <h5 className="card-title">الاسم هنا</h5>
+      <h5 className="card-title">عبدالرحمان اجواهر
+      </h5>
       <p className="card-text">يُدرس أستاذ ورشة النجارة المهارات الأساسية في النجارة ويعلم الطلاب كيفية التعامل مع الأدوات والأخشاب. لديه شغف كبير بإنتاج مشاريع يدوية وإبداعية وتحفيز الطلاب على تطوير مهاراتهم العملية</p>
     </div>
   </div>
