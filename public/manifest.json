@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "مركز الفرصة الثانية",
+  "name": "مركز الفرصة الثانية - مدرسة تعليمية خاصة في المغرب",
+  "description": "مركز تعليمي خاص يقدم برامج تعليمية حديثة ومهنية في النجارة والعلوم والرياضيات. الفرصة الثانية للتعلم والتطور.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -19,6 +20,15 @@
     }
   ],
   "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "categories": ["education", "training", "school"],
+  "lang": "ar",
+  "dir": "rtl",
+  "scope": "/",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"

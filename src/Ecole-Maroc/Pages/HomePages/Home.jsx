@@ -5,6 +5,8 @@ import './Home.css';
 import About from '../AboutPages/About';
 import Programme from '../ProgrammePages/Programme';
 import News from '../NewsPages/News';
+import SEO from '../../components/SEO';
+import StructuredData from '../../components/StructuredData';
 
 export default function Home() {
   const [showPages, setShowPages] = useState(false);
@@ -35,6 +37,15 @@ export default function Home() {
 
   return (
     <>
+      <SEO 
+        title="الرئيسية"
+        description="مرحباً بكم في مركز الفرصة الثانية - مدرسة تعليمية خاصة في المغرب تقدم برامج تعليمية حديثة ومهنية. اكتشفوا برامجنا في النجارة والعلوم والرياضيات."
+        keywords="مركز الفرصة الثانية, مدرسة مغربية, تعليم خاص, برامج تعليمية, نجارة, علوم, رياضيات, تعليم مهني, الدار البيضاء, المغرب, مدرسة ابتدائية, تعليم عالي الجودة, الفرصة الثانية للتعلم, الصفحة الرئيسية"
+        image="/images/5.jpg"
+      />
+      
+      <StructuredData type="organization" />
+      <StructuredData type="school" />
       
       <div className="home-container" style={{ backgroundImage: `url(${currentLogo})` }}>
         <h1 className="home-title">الفرصة الثانية</h1>

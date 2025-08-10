@@ -1,6 +1,7 @@
 import React from "react";
 import { FaCalendarAlt, FaClock, FaBook } from "react-icons/fa";
 import "./Programme.css"; 
+import SEO from '../../components/SEO';
 
 export default function Programme() {
 
@@ -14,7 +15,7 @@ export default function Programme() {
     
   
     { id: 6, period: "11/11/2024 - 15/11/2024", unit: "Matière", topic: "Les atomes et les ions" },
-    { id: 7, period: "18/11/2024 - 22/11/2024", unit: "Réactions chimiques", topic: "Réactions des métaux avec l’air" },
+    { id: 7, period: "18/11/2024 - 22/11/2024", unit: "Réactions chimiques", topic: "Réactions des métaux avec l'air" },
 
     { id: 8, period: "25/11/2024 - 29/11/2024", unit: "Mathématiques", topic: "Les racines carrées et puissances" },
     { id: 9, period: "2/12/2024 - 6/12/2024", unit: "Théorème de Thalès", topic: "Applications et exercices" },
@@ -23,7 +24,15 @@ export default function Programme() {
   ];
 
   return (
-    <div className="programme-container">
+    <>
+      <SEO 
+        title="البرنامج الدراسي"
+        description="اكتشف البرنامج الدراسي السنوي لمركز الفرصة الثانية. برامج تعليمية شاملة في العلوم والرياضيات والنجارة مع جدول زمني منظم للعام الدراسي 2024-2025."
+        keywords="البرنامج الدراسي, جدول دراسي, برامج تعليمية, علوم, رياضيات, نجارة, تعليم مهني, جدول زمني, مدرسة مغربية, مركز الفرصة الثانية, الدار البيضاء, المغرب, تعليم خاص"
+        image="/images/logo.jpg"
+      />
+      
+      <div className="programme-container">
     
       <div className="programme-header" dir="ltr">
         <h2 className="programme-title">
@@ -49,5 +58,6 @@ export default function Programme() {
         ))}
       </div>
     </div>
+    </>
   );
 }

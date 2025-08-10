@@ -1,10 +1,19 @@
 import React from 'react';
 import logo from '../images/GoogleMapTA.jpg'; 
 import './Map.css';
+import SEO from '../../components/SEO';
 
 export default function Map() {
   return(
-    <div className="map-container">
+    <>
+      <SEO 
+        title="موقع المدرسة"
+        description="اكتشف موقع مركز الفرصة الثانية على الخريطة. مدرسة تعليمية خاصة تقع في الدار البيضاء، المغرب. اضغط على الصورة للانتقال إلى Google Maps."
+        keywords="موقع المدرسة, خريطة المدرسة, عنوان المدرسة, الدار البيضاء, المغرب, Google Maps, مركز الفرصة الثانية, مدرسة تعليمية, تعليم خاص, موقع جغرافي"
+        image="/images/GoogleMapTA.jpg"
+      />
+      
+      <div className="map-container">
       <div className="text-container">
         <h2 className="instruction-text">
           اضغط على الصورة للانتقال إلى <strong>Google Maps</strong>
@@ -18,5 +27,6 @@ export default function Map() {
         <img src={logo} alt="Logo" className="map-image" />
       </a>
     </div>
+    </>
   )
 }

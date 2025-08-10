@@ -3,8 +3,18 @@ import logo from '../images/222.jpg';
 import logo2 from '../images/111.jpg';
 import logo3 from '../images/55555.jpg';
 import logo4 from '../images/666666.jpg';
+import SEO from '../../components/SEO';
+
 const About = () => (
-  <div className="container p-6">
+  <>
+    <SEO 
+      title="عن المدرسة"
+      description="تعرف على مركز الفرصة الثانية - مدرسة تعليمية خاصة في المغرب. اكتشف فريق العمل المتميز من المدير عبدالله اشح والمشرفة التربوية حليمة عاتق وأساتذة العلوم والنجارة."
+      keywords="عن المدرسة, مركز الفرصة الثانية, فريق العمل, المدير عبدالله اشح, المشرفة التربوية حليمة عاتق, أستاذة العلوم لعتيق فتيحة, أستاذ النجارة عبدالرحمان اجواهر, مدرسة مغربية, تعليم خاص, الدار البيضاء"
+      image="/images/222.jpg"
+    />
+    
+    <div className="container p-6">
     <h1 className="text-center mb-5 text-primary">عن المدرسة</h1>
     <p className="lead text-center text-muted mb-5">
       مدرستنا هي مؤسسة تعليمية خاصة تقع في المغرب. نقدم برامج تعليمية حديثة ومناسبة لاحتياجات الطلاب، مع التركيز على الجودة والابتكار.
@@ -69,6 +79,7 @@ const About = () => (
 
     </div>
   </div>
-);
+    </>
+  );
 
 export default About;

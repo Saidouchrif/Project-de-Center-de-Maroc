@@ -6,6 +6,7 @@ import logo from '../images/8.jpg';
 import logo2 from '../images/9.jpg';
 import logo3 from '../images/10.jpg';
 import logo4 from '../images/11.jpg';
+import SEO from '../../components/SEO';
 
 export default function News() {
   const newsArticles = [
@@ -45,27 +46,36 @@ export default function News() {
   ];
 
   return (
-    <div className="news-container">
-      <h2 className="news-title">
-        <FaNewspaper /> الأخبار
-      </h2>
-      <div className="news-list">
-        {newsArticles.map((article) => (
-          <div key={article.id} className="news-item">
-            <h3 className="news-item-title">
-              <Link >{article.title}</Link>
-            </h3>
-            <p className="news-item-description">{article.description}</p>
-            <div className="news-item-image">
-              <p>
-                <a href={article.imageLink} download>
-                  <FaDownload /> {article.imageTitle}
-                </a>
-              </p>
+    <>
+      <SEO 
+        title="الأخبار والإعلانات"
+        description="اطلع على آخر الأخبار والإعلانات المهمة من مركز الفرصة الثانية. توقيت زمني، قانون داخلي، إعلانات الامتحانات والمستجدات المدرسية."
+        keywords="أخبار المدرسة, إعلانات مدرسية, توقيت زمني, قانون داخلي, مواعيد الامتحانات, مستجدات تعليمية, مركز الفرصة الثانية, مدرسة مغربية, تعليم خاص, الدار البيضاء, المغرب"
+        image="/images/8.jpg"
+      />
+      
+      <div className="news-container">
+        <h2 className="news-title">
+          <FaNewspaper /> الأخبار
+        </h2>
+        <div className="news-list">
+          {newsArticles.map((article) => (
+            <div key={article.id} className="news-item">
+              <h3 className="news-item-title">
+                <Link >{article.title}</Link>
+              </h3>
+              <p className="news-item-description">{article.description}</p>
+              <div className="news-item-image">
+                <p>
+                  <a href={article.imageLink} download>
+                    <FaDownload /> {article.imageTitle}
+                  </a>
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
